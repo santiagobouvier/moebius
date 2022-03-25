@@ -1318,7 +1318,7 @@
 
 
     <!-- Informes -->
-    <section id="informes">
+    <section id="informeSeccion">
 
         <div class="content-box-md">
 
@@ -1341,37 +1341,9 @@
 
                     <div class="col-md-12 col-sm-8">
 
-                        <div id="informe" class="row wow fadeInUp" data-wow-duration="3s">
+                <div id="informes" class="row wow fadeInUp" data-wow-duration="3s">
 
-                            <div class="col-md-4 col-sm-6">
-
-                                <!-- Blog Post 01 -->
-                                <div class="blog-post">
-
-                                    <a href="argentinosInviertenEnUruguay.html" target="_blank"><img src="img/informes/Tapa1.jpg" alt=""></a>
-
-                                </div>
-                                
-
-                            </div>
-                            <div class="col-md-4 col-sm-6">
-
-                                <!-- Blog Post 02 -->
-                                <div class="blog-post">
-                                   <a href="argentinosTriplicaronCompras.html" target="_blank"><img src="img/informes/Tapa2.jpg" alt=""></a> 
                         
-                                </div>
-
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-
-                        <!-- Blog Post 03 -->
-                        <div class="blog-post">
-                            <a href="porQueInvertirEnUruguay.html" target="_blank"><img src="img/informes/Tapa3.jpg" alt=""></a>
-                
-                        </div>
-
-            </div>
 
                 </div>
 
@@ -2124,10 +2096,11 @@ Como especialistas en Real Estate, entendemos el mercado, analizamos las nuevas 
 
                 
                 await fetchInformes();
-
+                await fetchPrensa();
                 console.log('fin');
 
             }
+            
 
            async function fetchInformes() {
                 
@@ -2136,39 +2109,54 @@ Como especialistas en Real Estate, entendemos el mercado, analizamos las nuevas 
 
                     const informes = items.val();    
                    
-                    for (id in informes){
+                    for (informe in informes){
 
-                      let id = informes[id].id;
-                      let createDate = informes[id].createDate;
-                      let imageUrl = informes[id].imageUrl;
-                      let isEnable = informes[id].isEnable;
-                      let title = informes[id].title;
-                      let url = informes[id].url;
+                      let id = informes[informe].id;
+                      let createDate = informes[informe].createDate;
+                      let imageUrl = informes[informe].imageUrl;
+                      let isEnable = informes[informe].isEnable;
+                      let title = informes[informe].title;
+                      let url = informes[informe].url;
 
                       
-                      addHTMLInformes(id, createDate, imageUrl, isEnable, title, url);
-                       
+                     addHTMLInformes(id, createDate, imageUrl, isEnable, title, url);
+
+        
+
+                             
                    }
                    
             });
                    
-            }
+            } 
+
+
 
 
 
             // ADD HTML DATA
 
            function addHTMLInformes(id, createDate, imageUrl, isEnable, title, url){
-
-                let html =  `
-        
-                    <a href="argentinosInviertenEnUruguay.html" target="_blank"><img src="img/informes/Tapa1.jpg" alt=""></a>
             
-                `
-                $("#informe").append(html);
+                                var div = document.getElementById('informes');
+
+                                div.innerHTML += `
+
+                                        <div class="col-md-4 col-sm-6">
+
+                                                <div class="blog-post">
+
+                                    <a href=${url} target="_blank"><img src=${imageUrl} alt=""></a>
+
+                                        </div>
+                                    
+                                    </div>      
+                                
+                                `;
 
                
             }
+        
 
             
             
