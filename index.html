@@ -449,7 +449,7 @@
                             <br>
                             <div id="blog-btn">
                                 <a class="btn btn-general btn-yellow" href="informes.html" title="View All Posts"
-                                    role="button">ver todos los artículos</a>
+                                    role="button">ver todos los informes</a>
                             </div>
 
                         </div>
@@ -841,8 +841,10 @@
 
                 const informes = items.val();
 
+                const arrayInformes = [];
+
                 for (informe in informes) {
-                    var i = Object.keys(informes).indexOf(informe);
+                    
                     let id = informes[informe].id;
                     let createDate = informes[informe].createDate;
                     let imageUrl = informes[informe].imageUrl;
@@ -850,9 +852,17 @@
                     let title = informes[informe].title;
                     let url = informes[informe].url;
 
-                    if (i < 2) {
-                        addHTMLInformes(id, createDate, imageUrl, isEnable, title, url);
+                    const objectInforme = {id:id, createDate:createDate, imageUrl:imageUrl, isEnable:isEnable, title:title,url:url};
+                    arrayInformes.push(objectInforme)
+                }
 
+                arrayInformes.reverse()
+
+                for (inf in arrayInformes) {
+                    var i = Object.keys(arrayInformes).indexOf(inf);  
+                    
+                    if (i < 2) {
+                        addHTMLInformes(arrayInformes[inf].id, arrayInformes[inf].createDate, arrayInformes[inf].imageUrl, arrayInformes[inf].isEnable, arrayInformes[inf].title, arrayInformes[inf].url);
                     }
 
                 }
@@ -1113,7 +1123,6 @@
         // add html data
 
         function addHTMLInformes(id, createDate, imageUrl, isEnable, title, url) {
-            console.log(url)
 
             var div = document.getElementById('informesRowId');
 

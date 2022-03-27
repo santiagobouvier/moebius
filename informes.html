@@ -209,23 +209,32 @@
 
             await dbRef.child('informes').get().then((items) => {
 
-const informes = items.val();
+                const informes = items.val();
 
-for (informe in informes) {
-   
-    let id = informes[informe].id;
-    let createDate = informes[informe].createDate;
-    let imageUrl = informes[informe].imageUrl;
-    let isEnable = informes[informe].isEnable;
-    let title = informes[informe].title;
-    let url = informes[informe].url;
+                const arrayInformes = [];
 
-  
-        addHTMLInformes(id, createDate, imageUrl, isEnable, title, url);
-    
+                for (informe in informes) {
 
-}
-});
+                    let id = informes[informe].id;
+                    let createDate = informes[informe].createDate;
+                    let imageUrl = informes[informe].imageUrl;
+                    let isEnable = informes[informe].isEnable;
+                    let title = informes[informe].title;
+                    let url = informes[informe].url;
+
+                    const objectInforme = { id: id, createDate: createDate, imageUrl: imageUrl, isEnable: isEnable, title: title, url: url };
+                    arrayInformes.push(objectInforme)
+                }
+
+                arrayInformes.reverse()
+
+                for (inf in arrayInformes) {
+
+                    addHTMLInformes(arrayInformes[inf].id, arrayInformes[inf].createDate, arrayInformes[inf].imageUrl, arrayInformes[inf].isEnable, arrayInformes[inf].title, arrayInformes[inf].url);
+
+
+                }
+            });
         }
 
         function addHTMLInformes(id, createDate, imageUrl, isEnable, title, url) {
