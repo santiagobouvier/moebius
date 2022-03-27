@@ -53,11 +53,6 @@
 
 <body data-spy="scroll" data-target=".navbar" data-offset="65">
 
-    <!-- Preloader -->
-    <div id="preloader">
-        <div id="status">&nbsp;</div>
-    </div>
-
     <!-- Header -->
     <header>
         <nav class="navbar navbar-fixed-top">
@@ -85,27 +80,30 @@
 
       <!-- Listado Propiedades --> 
 
-        <section id="listadoPropiedades">
-
-            <ul>
-                <div onclick="showPozos(this)"><li>Pozos</li></div>
-                <li onclick="showRentaYa(this)">RentaYa</a></li>
-                <li onclick="showOcupaYa(this)">OcupaYa</a></li>
-            </ul>
-
-            <div id="pozos">
-                    <p>1</p>
+    
+            <div class="slider">
+                <div class="slider-inner">
+                    <div class="slide current">
+                        <img src="img/client/4.jpeg" alt="">
+                        <h3>Image-1 Caption</h3>
+                    </div>                    
+                    <div class="slide">
+                        <img src="img/client/5.jpeg" alt="">
+                        <h3>Image-2 Caption</h3>
+                    </div>
+                    <div class="slide">
+                        <img src="img/client/6.jpeg" alt="">
+                        <h3>Image-3 Caption</h3>
+                    </div>
+                </div>
+                <div class="slider-control">
+                    <div class="next"></div>
+                    <div class="prev"></div>
+                </div>    
             </div>
 
-            <div id="rentaYa">
-                    <p>2</p>
-            </div>
-
-            <div id="ocupaYa">
-                    <p>3</p>
-            </div>
-
-        </section>
+        
+        
 
 
     <!-- Footer  -->
@@ -165,6 +163,8 @@
     <!-- Custom JS -->
     <script src="js/script.js"></script>
 
+    <script src="js/slider.js"></script>
+
     <!-- Bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
@@ -190,112 +190,3 @@
 </html>
 
 
-
-<section class="justify-content-center">
-    <div class="container">
-        <div class="row">
-            <div class="vertical-heading">
-                <br><br><br>
-                <h2>Nuestras<br> <strong>Propiedades</strong></h2>
-                <br>
-            </div>
-            <!-- 1 -->
-            <div class="col-md-4 card">
-                <div class="front">
-                    <img src="img/client/1.jpeg" alt="">
-                    <div>
-                        <h3 class="">Edificio 01 Sync</h3>
-                        <span class=""><i class="fa fa-map-marker" aria-hidden="true"></i> Cordón</span>
-                    </div>
-                </div>
-                <div class="back">
-                    <div>
-                        <a href="" data-toggle="modal" data-target="#prop1">Ver Más</a>
-                    </div>
-                </div>
-            </div>
-            <!-- 2 -->
-            <div class="col-md-4 card">
-                <div class="front">
-                    <img src="img/client/3.jpeg" alt="">
-                    <div>
-                        <h3 class="">Edificio Housing Lima</h3>
-                        <span class=""><i class="fa fa-map-marker" aria-hidden="true"></i> Centro</span>
-                    </div>
-                </div>
-                <div class="back2">
-                    <div>
-                        <a href="" data-toggle="modal" data-target="#prop2">Ver Más</a>
-                    </div>
-                </div>
-            </div>
-            <!-- 3 -->
-            <div class="col-md-4 card">
-                <div class="front">
-                    <img src="img/client/5.jpeg" alt="">
-                    <div>
-                        <h3 class="">Bomar 3</h3>
-                        <span class=""><i class="fa fa-map-marker" aria-hidden="true"></i> Pocitos</span>
-                    </div>
-                </div>
-                <div class="back3">
-                    <div>
-                        <a href="" data-toggle="modal" data-target="#prop3">Ver Más</a>
-                    </div>
-                </div>
-            </div>
-            <!-- 4 -->
-            <div class="col-md-4 card">
-                <div class="front">
-                    <img src="img/client/8.jpeg" alt="">
-                    <div>
-                        <h3 class="">Austin</h3>
-                        <span class=""><i class="fa fa-map-marker" aria-hidden="true"></i> La Blanqueada</span>
-                    </div>
-                </div>
-                <div class="back4">
-                    <div>
-                        <a href="" data-toggle="modal" data-target="#prop4">Ver Más</a>
-                    </div>
-                </div>
-            </div>
-            <!-- 5 -->
-            <div class="col-md-4 card">
-                <div class="front">
-                    <img src="img/client/9.jpeg" alt="">
-                    <div>
-                        <h3 class="">Torre Munich</h3>
-                        <span class=""><i class="fa fa-map-marker" aria-hidden="true"></i> Cordón</span>
-                    </div>
-                </div>
-                <div class="back5">
-                    <div>
-                        <a href="" data-toggle="modal" data-target="#prop5">Ver Más</a>
-                    </div>
-                </div>
-            </div>
-            <!-- 6 -->
-            <div class="col-md-4 card">
-                <div class="front">
-                    <img src="img/client/10.jpeg" alt="">
-                    <div>
-                        <h3 class="">Soho Colonia</h3>
-                        <span class=""><i class="fa fa-map-marker" aria-hidden="true"></i> Cordón</span>
-                    </div>
-                </div>
-                <div class="back6">
-                    <div>
-                        <a href="" data-toggle="modal" data-target="#prop6">Ver Más</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-    </div>
-
-    <br><br>
-</section>
-
-</section>
