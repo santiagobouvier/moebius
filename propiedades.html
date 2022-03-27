@@ -66,9 +66,6 @@
 
                     <div class="navbar-header">
 
-                        <!-- Mobile Menu Open Button -->
-                        <span id="mobile-nav-open-btn">&#9776;</span>
-
                         <!-- Logo -->
                         
                         <a class="navbar-brand" href="index.html">
@@ -83,29 +80,137 @@
     </header>
     <!-- Header Ends --> 
 
+    <style>
+
+
+        @media (min-width: 620px) {
+
+        #myDIV{
+            width: 50%;
+            margin: auto;
+            }
+        }
+
+
+        .btn {
+            margin: 20px;
+            padding: 10px 20px; 
+            background-color:#ffa502;
+            cursor: pointer;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+    .active, .btn:hover{
+            
+            background-color: white;
+            color: #ffa502;
+            border: 2px solid #ffa502;
+        } 
+
+        .propiedades{
+          
+        }
+    </style>
       <!-- Listado Propiedades --> 
 
         <section id="listadoPropiedades">
 
-            <ul>
-                <div onclick="showPozos(this)"><li>Pozos</li></div>
-                <li onclick="showRentaYa(this)">RentaYa</a></li>
-                <li onclick="showOcupaYa(this)">OcupaYa</a></li>
+            <ul id="myDIV" style=" display: flex; justify-content: space-between; list-style: none;">
+                <li class="btn active" onclick="showPozos()">Pozos</li>
+                <li class="btn" onclick="showRentaYa()">RentaYa</li>
+                <li class="btn" onclick="showOcupaYa()">OcupaYa</li>
             </ul>
 
             <div id="pozos">
-                    <p>1</p>
+                    
             </div>
 
             <div id="rentaYa">
-                    <p>2</p>
+                    
             </div>
 
             <div id="ocupaYa">
-                    <p>3</p>
+                    
             </div>
 
+
+            <div class="propiedades">
+                <div class="container">
+                    <div class="row">
+                <div class="col-md-4 card">
+                    <div class="front">
+                        <img src="/img/client/7.jpeg" alt="">
+                        <div>
+                            <h3 class="">Edificio</h3>
+                            <span class=""><i class="fa fa-map-marker" aria-hidden="true"></i> La concha de tu hermana</span>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div>
+                            <a href="propiedad.html">Ver Más</a>
+                        </div>
+                    </div>
+                </div>
+           
+
+        
+                <div class="col-md-4 card">
+                    <div class="front">
+                        <img src="/img/client/7.jpeg" alt="">
+                        <div>
+                            <h3 class="">Edificio</h3>
+                            <span class=""><i class="fa fa-map-marker" aria-hidden="true"></i> La concha de tu hermana</span>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div>
+                            <a href="propiedad.html">Ver Más</a>
+                        </div>
+                    </div>
+                </div>
+         
+                
+                <div class="col-md-4 card">
+                    <div class="front">
+                        <img src="/img/client/7.jpeg" alt="">
+                        <div>
+                            <h3 class="">Edificio</h3>
+                            <span class=""><i class="fa fa-map-marker" aria-hidden="true"></i> La concha de tu hermana</span>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div>
+                            <a href="propiedad.html">Ver Más</a>
+                        </div>
+                    </div>
+                </div>
+        
+
+          
+                <div class="col-md-4 card">
+                    <div class="front">
+                        <img src="/img/client/7.jpeg" alt="">
+                        <div>
+                            <h3 class="">Edificio</h3>
+                            <span class=""><i class="fa fa-map-marker" aria-hidden="true"></i> La concha de tu hermana</span>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div>
+                            <a href="propiedad.html">Ver Más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+
+
         </section>
+        
+
+        
 
 
     <!-- Footer  -->
@@ -169,6 +274,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
     <script>
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("myDIV");
+        var btns = header.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+          });
+        }
+        </script>
+
+    <script>
             
             const firebaseConfig = {
 
@@ -184,6 +302,21 @@
 
             const app = firebase.initializeApp(firebaseConfig);
 
+
+
+
+            function showPozos(){
+              alert("alertpozos")
+            }
+
+            function showRentaYa(){
+               alert("alertrentaya")
+           }
+
+            function showOcupaYa(){
+               alert("alertocupa")
+           }
+
     </script>
 </body>
 
@@ -191,111 +324,3 @@
 
 
 
-<section class="justify-content-center">
-    <div class="container">
-        <div class="row">
-            <div class="vertical-heading">
-                <br><br><br>
-                <h2>Nuestras<br> <strong>Propiedades</strong></h2>
-                <br>
-            </div>
-            <!-- 1 -->
-            <div class="col-md-4 card">
-                <div class="front">
-                    <img src="img/client/1.jpeg" alt="">
-                    <div>
-                        <h3 class="">Edificio 01 Sync</h3>
-                        <span class=""><i class="fa fa-map-marker" aria-hidden="true"></i> Cordón</span>
-                    </div>
-                </div>
-                <div class="back">
-                    <div>
-                        <a href="" data-toggle="modal" data-target="#prop1">Ver Más</a>
-                    </div>
-                </div>
-            </div>
-            <!-- 2 -->
-            <div class="col-md-4 card">
-                <div class="front">
-                    <img src="img/client/3.jpeg" alt="">
-                    <div>
-                        <h3 class="">Edificio Housing Lima</h3>
-                        <span class=""><i class="fa fa-map-marker" aria-hidden="true"></i> Centro</span>
-                    </div>
-                </div>
-                <div class="back2">
-                    <div>
-                        <a href="" data-toggle="modal" data-target="#prop2">Ver Más</a>
-                    </div>
-                </div>
-            </div>
-            <!-- 3 -->
-            <div class="col-md-4 card">
-                <div class="front">
-                    <img src="img/client/5.jpeg" alt="">
-                    <div>
-                        <h3 class="">Bomar 3</h3>
-                        <span class=""><i class="fa fa-map-marker" aria-hidden="true"></i> Pocitos</span>
-                    </div>
-                </div>
-                <div class="back3">
-                    <div>
-                        <a href="" data-toggle="modal" data-target="#prop3">Ver Más</a>
-                    </div>
-                </div>
-            </div>
-            <!-- 4 -->
-            <div class="col-md-4 card">
-                <div class="front">
-                    <img src="img/client/8.jpeg" alt="">
-                    <div>
-                        <h3 class="">Austin</h3>
-                        <span class=""><i class="fa fa-map-marker" aria-hidden="true"></i> La Blanqueada</span>
-                    </div>
-                </div>
-                <div class="back4">
-                    <div>
-                        <a href="" data-toggle="modal" data-target="#prop4">Ver Más</a>
-                    </div>
-                </div>
-            </div>
-            <!-- 5 -->
-            <div class="col-md-4 card">
-                <div class="front">
-                    <img src="img/client/9.jpeg" alt="">
-                    <div>
-                        <h3 class="">Torre Munich</h3>
-                        <span class=""><i class="fa fa-map-marker" aria-hidden="true"></i> Cordón</span>
-                    </div>
-                </div>
-                <div class="back5">
-                    <div>
-                        <a href="" data-toggle="modal" data-target="#prop5">Ver Más</a>
-                    </div>
-                </div>
-            </div>
-            <!-- 6 -->
-            <div class="col-md-4 card">
-                <div class="front">
-                    <img src="img/client/10.jpeg" alt="">
-                    <div>
-                        <h3 class="">Soho Colonia</h3>
-                        <span class=""><i class="fa fa-map-marker" aria-hidden="true"></i> Cordón</span>
-                    </div>
-                </div>
-                <div class="back6">
-                    <div>
-                        <a href="" data-toggle="modal" data-target="#prop6">Ver Más</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-    </div>
-
-    <br><br>
-</section>
-
-</section>

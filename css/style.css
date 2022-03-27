@@ -3023,8 +3023,8 @@ a.control_next {
 }
 
 div .slider{
-	max-width: 550px;
-    max-height: 350px;
+	max-width: 950px;
+    max-height: 550px;
     width: calc(100% - 30px);
     height: 100%;
 	position: absolute;
