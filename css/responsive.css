@@ -473,9 +473,23 @@
 
 
 
-@media (min-width: 620px) {
+@media (min-width: 670px) {
 
     .pressItem{
         margin: 20px;
     }
 }
+
+@media (max-width: 715px) {
+
+    .nosotrosTexto div{
+       margin-top: 10px;
+    }
+
+    .nosotrosTexto div p{
+        margin-top: 30px;
+        margin-bottom: 40px;
+     }
+}
+
+
