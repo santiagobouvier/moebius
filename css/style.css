@@ -1292,10 +1292,7 @@ div .press{
     object-fit: cover;
 }
 
-.informes a img {
-    width: 100%;
-    object-fit: contain;
-  }
+
 
 .informes a:hover {
     color: #212226;
