@@ -12,12 +12,14 @@
     <!-- Title -->
     <title>Moebius</title>
 
-     <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <!-- Basic SEO -->
     <meta name="description" content="Moebius Propiedades">
-    <meta name="keywords" content="HTML5, CSS3, JQuery, Bootstrap, Web Design, Web Development, Responsive website, Creative website">
+    <meta name="keywords"
+        content="HTML5, CSS3, JQuery, Bootstrap, Web Design, Web Development, Responsive website, Creative website">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/logo/logo.png">
@@ -67,150 +69,81 @@
                     <div class="navbar-header">
 
                         <!-- Logo -->
-                        
+
                         <a class="navbar-brand" href="index.html">
                             <h1 class="volverAInicio">Volver a Inicio</h1>
                         </a>
-                    
+
                     </div>
 
                 </div>
             </div>
         </nav>
     </header>
-    <!-- Header Ends --> 
+    <!-- Header Ends -->
 
     <style>
-
-
         @media (min-width: 620px) {
 
-        #myDIV{
-            width: 50%;
-            margin: auto;
+            #myDIV {
+                width: 50%;
+                margin: auto;
             }
         }
 
 
         .btn {
             margin: 20px;
-            padding: 10px 20px; 
-            background-color:#ffa502;
+            padding: 10px 20px;
+            background-color: #ffa502;
             cursor: pointer;
             color: white;
             margin-bottom: 30px;
         }
 
-    .active, .btn:hover{
-            
+        .active,
+        .btn:hover {
+
             background-color: white;
             color: #ffa502;
             border: 2px solid #ffa502;
-        } 
-
-        .propiedades{
-          
         }
     </style>
-      <!-- Listado Propiedades --> 
 
-        <section id="listadoPropiedades">
+    <!-- Listado Propiedades -->
 
-            <ul id="myDIV" style=" display: flex; justify-content: space-between; list-style: none;">
-                <li class="btn active" onclick="showPozos()">Pozos</li>
-                <li class="btn" onclick="showRentaYa()">RentaYa</li>
-                <li class="btn" onclick="showOcupaYa()">OcupaYa</li>
-            </ul>
+    <section id="listadoPropiedades">
 
-            <div id="pozos">
-                    
-            </div>
+        <ul id="myDIV" style=" display: flex; justify-content: space-between; list-style: none;">
+            <li class="btn active" onclick="showPozos()">Pozos</li>
+            <li class="btn" onclick="showRentaYa()">RentaYa</li>
+            <li class="btn" onclick="showOcupaYa()">OcupaYa</li>
+        </ul>
 
-            <div id="rentaYa">
-                    
-            </div>
+        <div id="pozos">
 
-            <div id="ocupaYa">
-                    
-            </div>
+        </div>
+
+        <div id="rentaYa">
+
+        </div>
+
+        <div id="ocupaYa">
+
+        </div>
 
 
-            <div class="propiedades">
-                <div class="container">
-                    <div class="row">
-                <div class="col-md-4 card">
-                    <div class="front">
-                        <img src="/img/client/7.jpeg" alt="">
-                        <div>
-                            <h3 class="">Edificio</h3>
-                            <span class=""><i class="fa fa-map-marker" aria-hidden="true"></i> La concha de tu hermana</span>
-                        </div>
-                    </div>
-                    <div class="back">
-                        <div>
-                            <a href="propiedad.html">Ver Más</a>
-                        </div>
-                    </div>
-                </div>
-           
+        <div class="propiedades">
+            <div class="container">
+                <div class="row" id="propiedades">
 
-        
-                <div class="col-md-4 card">
-                    <div class="front">
-                        <img src="/img/client/7.jpeg" alt="">
-                        <div>
-                            <h3 class="">Edificio</h3>
-                            <span class=""><i class="fa fa-map-marker" aria-hidden="true"></i> La concha de tu hermana</span>
-                        </div>
-                    </div>
-                    <div class="back">
-                        <div>
-                            <a href="propiedad.html">Ver Más</a>
-                        </div>
-                    </div>
-                </div>
-         
-                
-                <div class="col-md-4 card">
-                    <div class="front">
-                        <img src="/img/client/7.jpeg" alt="">
-                        <div>
-                            <h3 class="">Edificio</h3>
-                            <span class=""><i class="fa fa-map-marker" aria-hidden="true"></i> La concha de tu hermana</span>
-                        </div>
-                    </div>
-                    <div class="back">
-                        <div>
-                            <a href="propiedad.html">Ver Más</a>
-                        </div>
-                    </div>
-                </div>
-        
 
-          
-                <div class="col-md-4 card">
-                    <div class="front">
-                        <img src="/img/client/7.jpeg" alt="">
-                        <div>
-                            <h3 class="">Edificio</h3>
-                            <span class=""><i class="fa fa-map-marker" aria-hidden="true"></i> La concha de tu hermana</span>
-                        </div>
-                    </div>
-                    <div class="back">
-                        <div>
-                            <a href="propiedad.html">Ver Más</a>
-                        </div>
-                    </div>
                 </div>
             </div>
-            </div>
-            </div>
+        </div>
 
 
-        </section>
-        
-
-        
+    </section>
 
 
     <!-- Footer  -->
@@ -226,7 +159,8 @@
         </div>
 
         <!-- Back To Top -->
-        <a href="#press" id="back-to-top" class="btn btn-sm btn-yellow btn-back-to-top smooth-scroll hidden-sm hidden-xs" title="home" role="button">
+        <a href="#press" id="back-to-top"
+            class="btn btn-sm btn-yellow btn-back-to-top smooth-scroll hidden-sm hidden-xs" title="home" role="button">
             <i class="fa fa-angle-up"></i>
         </a>
 
@@ -238,7 +172,9 @@
 
     <!-- Bootstrap JS -->
     <script src="js/bootstrap/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
     <!-- Owl Carousel JS -->
     <script src="js/owl-carousel/owl.carousel.min.js"></script>
@@ -271,24 +207,44 @@
     <script src="js/script.js"></script>
 
     <!-- Bootstrap 5 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
     <script>
         // Add active class to the current button (highlight it)
         var header = document.getElementById("myDIV");
         var btns = header.getElementsByClassName("btn");
         for (var i = 0; i < btns.length; i++) {
-          btns[i].addEventListener("click", function() {
-          var current = document.getElementsByClassName("active");
-          current[0].className = current[0].className.replace(" active", "");
-          this.className += " active";
-          });
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
         }
-        </script>
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js">  </script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js">  </script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js">  </script>
+
 
     <script>
-            
-            const firebaseConfig = {
+        async function savePropertyId(id) {
+
+            for (prop in arrayPropiedades) {
+
+                if (id == arrayPropiedades[prop].id) {
+                    localStorage.setItem('propiedad', JSON.stringify(arrayPropiedades[prop]));
+                }
+            }
+        }
+    </script>
+
+
+    <script>
+
+        const firebaseConfig = {
 
             apiKey: "AIzaSyCqfFKcaEe2J9Dopa80VLmG62Py5KhddP0",
             authDomain: "moebius-8ba02.firebaseapp.com",
@@ -298,29 +254,326 @@
             messagingSenderId: "404676511853",
             appId: "1:404676511853:web:4895c6ec5b3786637fd764"
 
-            };
+        };
 
-            const app = firebase.initializeApp(firebaseConfig);
+        const app = firebase.initializeApp(firebaseConfig);
+        const arrayPropiedades = [];
+
+        async function showPozos() {
+
+            var div = document.getElementById('propiedades');
+
+            div.innerHTML = ``;
+           
+            const dbRef = firebase.database().ref();
+
+            await dbRef.child('pozos').get().then((items) => {
+
+                const pozos = items.val();
+
+                for (pozo in pozos) {
+
+                    let amenities = pozos[pozo].amenities;
+                    let barrio = pozos[pozo].barrio;
+                    let calificacion = pozos[pozo].calificacion;
+                    let calle = pozos[pozo].calle;
+                    let conexiones = pozos[pozo].conexiones;
+                    let createDate = pozos[pozo].createDate;
+                    let descripcion = pozos[pozo].descripcion;
+                    let fechaEntrega = pozos[pozo].fechaEntrega;
+                    let financiacion = pozos[pozo].financiacion;
+                    let garages = pozos[pozo].garages;
+                    let gastosComunes = pozos[pozo].gastosComunes;
+                    let id = pozos[pozo].id;
+                    let imageOneUrl = pozos[pozo].imageOneUrl;
+                    let imageTwoUrl = pozos[pozo].imageTwoUrl;
+                    let imageThreeUrl = pozos[pozo].imageThreeUrl;
+                    let indiceInteresInquilino = pozos[pozo].indiceInteresInquilino;
+                    let indiceMoebius = pozos[pozo].indiceMoebius;
+                    let isEnable = pozos[pozo].isEnable;
+                    let isFeatured = pozos[pozo].isFeatured;
+                    let isViviendaPromovida = pozos[pozo].isViviendaPromovida;
+                    let latitude = pozos[pozo].latitude;
+                    let longitude = pozos[pozo].longitude;
+                    let precio = pozos[pozo].precio;
+                    let rentabilidadAnual = pozos[pozo].rentabilidadAnual;
+                    let sena = pozos[pozo].sena;
+                    let title = pozos[pozo].title;
+                    let videoUrl = pozos[pozo].videoUrl;
+
+                    if (isEnable) {
+                       
+
+                        addPropiededadToCarousel(amenities,
+                            barrio,
+                            calificacion,
+                            calle,
+                            conexiones,
+                            createDate,
+                            descripcion,
+                            fechaEntrega,
+                            financiacion,
+                            garages,
+                            gastosComunes,
+                            id,
+                            imageOneUrl,
+                            imageTwoUrl,
+                            imageThreeUrl,
+                            indiceInteresInquilino,
+                            indiceMoebius,
+                            isEnable,
+                            isFeatured,
+                            isViviendaPromovida,
+                            latitude,
+                            longitude,
+                            precio,
+                            rentabilidadAnual,
+                            sena,
+                            title,
+                            videoUrl);
+                    }
+                }
+            });
+        }
+
+        async function showRentaYa() {
+
+            var div = document.getElementById('propiedades');
+
+            div.innerHTML = ``;
+
+             const dbRef = firebase.database().ref();
+ 
+            await dbRef.child('rentaYa').get().then((items) => {
+ 
+                 const rentaYa = items.val();
+ 
+                 for (prop in rentaYa) {
+ 
+                     let amenities = rentaYa[prop].amenities;
+                     let barrio = rentaYa[prop].barrio;
+                     let calificacion = rentaYa[prop].calificacion;
+                     let calle = rentaYa[prop].calle;
+                     let conexiones = rentaYa[prop].conexiones;
+                     let createDate = rentaYa[prop].createDate;
+                     let descripcion = rentaYa[prop].descripcion;
+                     let fechaEntrega = rentaYa[prop].fechaEntrega;
+                     let financiacion = rentaYa[prop].financiacion;
+                     let garages = rentaYa[prop].garages;
+                     let gastosComunes = rentaYa[prop].gastosComunes;
+                     let id = rentaYa[prop].id;
+                     let imageOneUrl = rentaYa[prop].imageOneUrl;
+                     let imageTwoUrl = rentaYa[prop].imageTwoUrl;
+                     let imageThreeUrl = rentaYa[prop].imageThreeUrl;
+                     let indiceInteresInquilino = rentaYa[prop].indiceInteresInquilino;
+                     let indiceMoebius = rentaYa[prop].indiceMoebius;
+                     let isEnable = rentaYa[prop].isEnable;
+                     let isFeatured = rentaYa[prop].isFeatured;
+                     let isViviendaPromovida = rentaYa[prop].isViviendaPromovida;
+                     let latitude = rentaYa[prop].latitude;
+                     let longitude = rentaYa[prop].longitude;
+                     let precio = rentaYa[prop].precio;
+                     let rentabilidadAnual = rentaYa[prop].rentabilidadAnual;
+                     let sena = rentaYa[prop].sena;
+                     let title = rentaYa[prop].title;
+                     let videoUrl = rentaYa[prop].videoUrl;
+ 
+                     if (isEnable) {
+ 
+                         addPropiededadToCarousel(amenities,
+                             barrio,
+                             calificacion,
+                             calle,
+                             conexiones,
+                             createDate,
+                             descripcion,
+                             fechaEntrega,
+                             financiacion,
+                             garages,
+                             gastosComunes,
+                             id,
+                             imageOneUrl,
+                             imageTwoUrl,
+                             imageThreeUrl,
+                             indiceInteresInquilino,
+                             indiceMoebius,
+                             isEnable,
+                             isFeatured,
+                             isViviendaPromovida,
+                             latitude,
+                             longitude,
+                             precio,
+                             rentabilidadAnual,
+                             sena,
+                             title,
+                             videoUrl);
+                     }
+                 }
+             });
+        }
+
+        async function showOcupaYa() {
+
+            var div = document.getElementById('propiedades');
+
+            div.innerHTML = ``;
+
+            const dbRef = firebase.database().ref();
+
+            await dbRef.child('ocupaYa').get().then((items) => {
+
+                const ocupaYa = items.val();
+
+                for (prop in ocupaYa) {
+
+                    let amenities = ocupaYa[prop].amenities;
+                    let barrio = ocupaYa[prop].barrio;
+                    let calificacion = ocupaYa[prop].calificacion;
+                    let calle = ocupaYa[prop].calle;
+                    let conexiones = ocupaYa[prop].conexiones;
+                    let createDate = ocupaYa[prop].createDate;
+                    let descripcion = ocupaYa[prop].descripcion;
+                    let fechaEntrega = ocupaYa[prop].fechaEntrega;
+                    let financiacion = ocupaYa[prop].financiacion;
+                    let garages = ocupaYa[prop].garages;
+                    let gastosComunes = ocupaYa[prop].gastosComunes;
+                    let id = ocupaYa[prop].id;
+                    let imageOneUrl = ocupaYa[prop].imageOneUrl;
+                    let imageTwoUrl = ocupaYa[prop].imageTwoUrl;
+                    let imageThreeUrl = ocupaYa[prop].imageThreeUrl;
+                    let indiceInteresInquilino = ocupaYa[prop].indiceInteresInquilino;
+                    let indiceMoebius = ocupaYa[prop].indiceMoebius;
+                    let isEnable = ocupaYa[prop].isEnable;
+                    let isFeatured = ocupaYa[prop].isFeatured;
+                    let isViviendaPromovida = ocupaYa[prop].isViviendaPromovida;
+                    let latitude = ocupaYa[prop].latitude;
+                    let longitude = ocupaYa[prop].longitude;
+                    let precio = ocupaYa[prop].precio;
+                    let rentabilidadAnual = ocupaYa[prop].rentabilidadAnual;
+                    let sena = ocupaYa[prop].sena;
+                    let title = ocupaYa[prop].title;
+                    let videoUrl = ocupaYa[prop].videoUrl;
+
+                    if (isEnable) {
+
+                        addPropiededadToCarousel(amenities,
+                            barrio,
+                            calificacion,
+                            calle,
+                            conexiones,
+                            createDate,
+                            descripcion,
+                            fechaEntrega,
+                            financiacion,
+                            garages,
+                            gastosComunes,
+                            id,
+                            imageOneUrl,
+                            imageTwoUrl,
+                            imageThreeUrl,
+                            indiceInteresInquilino,
+                            indiceMoebius,
+                            isEnable,
+                            isFeatured,
+                            isViviendaPromovida,
+                            latitude,
+                            longitude,
+                            precio,
+                            rentabilidadAnual,
+                            sena,
+                            title,
+                            videoUrl);
+                    }
+                }
+            });
 
 
+        }
 
 
-            function showPozos(){
-              alert("alertpozos")
+        function addPropiededadToCarousel(amenities,
+            barrio,
+            calificacion,
+            calle,
+            conexiones,
+            createDate,
+            descripcion,
+            fechaEntrega,
+            financiacion,
+            garages,
+            gastosComunes,
+            id,
+            imageOneUrl,
+            imageTwoUrl,
+            imageThreeUrl,
+            indiceInteresInquilino,
+            indiceMoebius,
+            isEnable,
+            isFeatured,
+            isViviendaPromovida,
+            latitude,
+            longitude,
+            precio,
+            rentabilidadAnual,
+            sena,
+            title,
+            videoUrl) {
+
+            const propiedad = {
+                amenities: amenities,
+                barrio: barrio,
+                calificacion: calificacion,
+                calle: calle,
+                conexiones: conexiones,
+                createDate: createDate,
+                descripcion: descripcion,
+                fechaEntrega: fechaEntrega,
+                financiacion: financiacion,
+                garages: garages,
+                gastosComunes: gastosComunes,
+                id: id,
+                imageOneUrl: imageOneUrl,
+                imageTwoUrl: imageTwoUrl,
+                imageThreeUrl: imageThreeUrl,
+                indiceInteresInquilino: indiceInteresInquilino,
+                indiceMoebius: indiceMoebius,
+                isEnable: isEnable,
+                isFeatured: isFeatured,
+                isViviendaPromovida: isViviendaPromovida,
+                latitude: latitude,
+                longitude: longitude,
+                precio: precio,
+                rentabilidadAnual: rentabilidadAnual,
+                sena: sena,
+                title: title,
+                videoUrl: videoUrl
             }
 
-            function showRentaYa(){
-               alert("alertrentaya")
-           }
+            arrayPropiedades.push(propiedad)
 
-            function showOcupaYa(){
-               alert("alertocupa")
-           }
+
+            var div = document.getElementById('propiedades');
+
+            div.innerHTML += `
+        <div class="col-md-4 card">
+            <div class="front">
+                <img src="${imageOneUrl}" alt="">
+                <div>
+                    <h3 class="">${title}</h3>
+                    <span class=""><i class="fa fa-map-marker" aria-hidden="true"></i> ${barrio}</span>
+                </div>
+            </div>
+            <div class="back">
+                <div>
+                    <a onClick={savePropertyId("${id}")} href="propiedad.html">Ver Más</a>
+                </div>
+            </div>
+        </div>
+
+    `;
+        }
 
     </script>
 </body>
 
 </html>
-
-
-

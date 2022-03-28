@@ -165,6 +165,41 @@
     </section>
     <!-- Home Ends -->
 
+    <section id="propiedades" class="justify-content-center">
+        <div class="container">
+            <div class="row">
+                <div class="vertical-heading">
+                    <br><br><br>
+                    <h2>Nuestros <strong>Destacados</strong></h2>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <section id="allProperties" class="justify-content-center">
+        <br><br>
+        <div class="container">
+            <div id="blog-btn">
+                <a class="btn btn-general btn-yellow" href="propiedades.html" title="View All Posts" role="button">ver
+                    todos las propiedades</a>
+            </div>
+
+
+
+        </div>
+
+
+        <!--  -->
+
+
+
+    </section>
+
+
+
     <!-- About -->
     <section id="about">
 
@@ -328,32 +363,6 @@
     <!-- App section ends -->
 
     <br><br>
-
-    <section id="propiedades" class="justify-content-center">
-        <div class="container">
-            <div class="row">
-                <div class="vertical-heading">
-                    <br><br><br>
-                    <h2>Nuestras<br> <strong>Propiedades</strong></h2>
-                    <br>
-
-                    <div id="blog-btn">
-                        <a class="btn btn-general btn-yellow" href="propiedades.html" title="View All Posts"
-                            role="button">ver todos las propiedades</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-        <br><br>
-
-    </section>
-
-
-
-
 
 
     <!-- Stats -->
@@ -786,16 +795,23 @@
     <script src="js/script.js">
     </script>
 
-
-    <script src="js/carouselInformes.js"></script>
-
     <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js">  </script>
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js">  </script>
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js">  </script>
 
+    <script>
+        async function savePropertyId(id) {
 
+            for (prop in arrayPropiedades) {
+
+                if (id == arrayPropiedades[prop].id){
+                     localStorage.setItem('propiedad', JSON.stringify(arrayPropiedades[prop]));
+                }
+            }
+        }
+    </script>
 
     <script>
         const firebaseConfig = {
@@ -815,9 +831,7 @@
     </script>
 
 
-
     <script>
-
 
         // PENDIENTE: HACER LOADING ASYC AWAIT MIENTRAS CARGA TODO
 
@@ -826,6 +840,7 @@
         // FETCH DATA FROM FIREBASE
 
         var cantidadCarouselItems = 0;
+        const arrayPropiedades = [];
 
         async function fetchDataFromFirebase() {
             console.log('inicio');
@@ -848,7 +863,7 @@
                 const arrayInformes = [];
 
                 for (informe in informes) {
-                    
+
                     let id = informes[informe].id;
                     let createDate = informes[informe].createDate;
                     let imageUrl = informes[informe].imageUrl;
@@ -856,15 +871,15 @@
                     let title = informes[informe].title;
                     let url = informes[informe].url;
 
-                    const objectInforme = {id:id, createDate:createDate, imageUrl:imageUrl, isEnable:isEnable, title:title,url:url};
+                    const objectInforme = { id: id, createDate: createDate, imageUrl: imageUrl, isEnable: isEnable, title: title, url: url };
                     arrayInformes.push(objectInforme)
                 }
 
                 arrayInformes.reverse()
 
                 for (inf in arrayInformes) {
-                    var i = Object.keys(arrayInformes).indexOf(inf);  
-                    
+                    var i = Object.keys(arrayInformes).indexOf(inf);
+
                     if (i < 2) {
                         addHTMLInformes(arrayInformes[inf].id, arrayInformes[inf].createDate, arrayInformes[inf].imageUrl, arrayInformes[inf].isEnable, arrayInformes[inf].title, arrayInformes[inf].url);
                     }
@@ -903,6 +918,7 @@
             await fetchPozos();
             await fetchRentaYa();
             await fetchOcupaYa();
+
         }
 
         async function fetchPozos() {
@@ -1212,6 +1228,40 @@
             title,
             videoUrl) {
 
+            const propiedad = {
+                amenities: amenities,
+                barrio: barrio,
+                calificacion: calificacion,
+                calle: calle,
+                conexiones: conexiones,
+                createDate: createDate,
+                descripcion: descripcion,
+                fechaEntrega: fechaEntrega,
+                financiacion: financiacion,
+                garages: garages,
+                gastosComunes: gastosComunes,
+                id: id,
+                imageOneUrl: imageOneUrl,
+                imageTwoUrl: imageTwoUrl,
+                imageThreeUrl: imageThreeUrl,
+                indiceInteresInquilino: indiceInteresInquilino,
+                indiceMoebius: indiceMoebius,
+                isEnable: isEnable,
+                isFeatured: isFeatured,
+                isViviendaPromovida: isViviendaPromovida,
+                latitude: latitude,
+                longitude: longitude,
+                precio: precio,
+                rentabilidadAnual: rentabilidadAnual,
+                sena: sena,
+                title: title,
+                videoUrl: videoUrl
+            }
+
+            arrayPropiedades.push(propiedad)
+
+
+
             var div = document.getElementById('propiedades');
 
             div.innerHTML += `
@@ -1225,7 +1275,7 @@
             </div>
             <div class="back">
                 <div>
-                    <a href="propiedad.html">Ver Más</a>
+                    <a onClick={savePropertyId("${id}")} href="propiedad.html">Ver Más</a>
                 </div>
             </div>
         </div>

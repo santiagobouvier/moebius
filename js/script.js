@@ -604,11 +604,10 @@ jQuery(document).ready(function ($) {
        
        
        if(leftPosition < (trackWidth - listWidth) && value == 2) {
-        alert("holi")
+       
            track.style.left = `${-1 * (leftPosition - slickWidth)}px`;
        } else if (leftPosition > 0 && value == 1) {
-       alert("hola")
+       
            track.style.left = `${-1 * (leftPosition - slickWidth)}px`;
        }
    }
-
