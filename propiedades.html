@@ -230,6 +230,11 @@
 
 
     <script>
+
+        $(window).on('load', function () { // makes sure that whole site is loaded
+            showPozos();
+        });
+
         async function savePropertyId(id) {
 
             for (prop in arrayPropiedades) {
@@ -240,6 +245,8 @@
             }
         }
     </script>
+
+
 
 
     <script>
@@ -264,7 +271,7 @@
             var div = document.getElementById('propiedades');
 
             div.innerHTML = ``;
-           
+
             const dbRef = firebase.database().ref();
 
             await dbRef.child('pozos').get().then((items) => {
@@ -302,7 +309,7 @@
                     let videoUrl = pozos[pozo].videoUrl;
 
                     if (isEnable) {
-                       
+
 
                         addPropiededadToCarousel(amenities,
                             barrio,
@@ -342,74 +349,74 @@
 
             div.innerHTML = ``;
 
-             const dbRef = firebase.database().ref();
- 
+            const dbRef = firebase.database().ref();
+
             await dbRef.child('rentaYa').get().then((items) => {
- 
-                 const rentaYa = items.val();
- 
-                 for (prop in rentaYa) {
- 
-                     let amenities = rentaYa[prop].amenities;
-                     let barrio = rentaYa[prop].barrio;
-                     let calificacion = rentaYa[prop].calificacion;
-                     let calle = rentaYa[prop].calle;
-                     let conexiones = rentaYa[prop].conexiones;
-                     let createDate = rentaYa[prop].createDate;
-                     let descripcion = rentaYa[prop].descripcion;
-                     let fechaEntrega = rentaYa[prop].fechaEntrega;
-                     let financiacion = rentaYa[prop].financiacion;
-                     let garages = rentaYa[prop].garages;
-                     let gastosComunes = rentaYa[prop].gastosComunes;
-                     let id = rentaYa[prop].id;
-                     let imageOneUrl = rentaYa[prop].imageOneUrl;
-                     let imageTwoUrl = rentaYa[prop].imageTwoUrl;
-                     let imageThreeUrl = rentaYa[prop].imageThreeUrl;
-                     let indiceInteresInquilino = rentaYa[prop].indiceInteresInquilino;
-                     let indiceMoebius = rentaYa[prop].indiceMoebius;
-                     let isEnable = rentaYa[prop].isEnable;
-                     let isFeatured = rentaYa[prop].isFeatured;
-                     let isViviendaPromovida = rentaYa[prop].isViviendaPromovida;
-                     let latitude = rentaYa[prop].latitude;
-                     let longitude = rentaYa[prop].longitude;
-                     let precio = rentaYa[prop].precio;
-                     let rentabilidadAnual = rentaYa[prop].rentabilidadAnual;
-                     let sena = rentaYa[prop].sena;
-                     let title = rentaYa[prop].title;
-                     let videoUrl = rentaYa[prop].videoUrl;
- 
-                     if (isEnable) {
- 
-                         addPropiededadToCarousel(amenities,
-                             barrio,
-                             calificacion,
-                             calle,
-                             conexiones,
-                             createDate,
-                             descripcion,
-                             fechaEntrega,
-                             financiacion,
-                             garages,
-                             gastosComunes,
-                             id,
-                             imageOneUrl,
-                             imageTwoUrl,
-                             imageThreeUrl,
-                             indiceInteresInquilino,
-                             indiceMoebius,
-                             isEnable,
-                             isFeatured,
-                             isViviendaPromovida,
-                             latitude,
-                             longitude,
-                             precio,
-                             rentabilidadAnual,
-                             sena,
-                             title,
-                             videoUrl);
-                     }
-                 }
-             });
+
+                const rentaYa = items.val();
+
+                for (prop in rentaYa) {
+
+                    let amenities = rentaYa[prop].amenities;
+                    let barrio = rentaYa[prop].barrio;
+                    let calificacion = rentaYa[prop].calificacion;
+                    let calle = rentaYa[prop].calle;
+                    let conexiones = rentaYa[prop].conexiones;
+                    let createDate = rentaYa[prop].createDate;
+                    let descripcion = rentaYa[prop].descripcion;
+                    let fechaEntrega = rentaYa[prop].fechaEntrega;
+                    let financiacion = rentaYa[prop].financiacion;
+                    let garages = rentaYa[prop].garages;
+                    let gastosComunes = rentaYa[prop].gastosComunes;
+                    let id = rentaYa[prop].id;
+                    let imageOneUrl = rentaYa[prop].imageOneUrl;
+                    let imageTwoUrl = rentaYa[prop].imageTwoUrl;
+                    let imageThreeUrl = rentaYa[prop].imageThreeUrl;
+                    let indiceInteresInquilino = rentaYa[prop].indiceInteresInquilino;
+                    let indiceMoebius = rentaYa[prop].indiceMoebius;
+                    let isEnable = rentaYa[prop].isEnable;
+                    let isFeatured = rentaYa[prop].isFeatured;
+                    let isViviendaPromovida = rentaYa[prop].isViviendaPromovida;
+                    let latitude = rentaYa[prop].latitude;
+                    let longitude = rentaYa[prop].longitude;
+                    let precio = rentaYa[prop].precio;
+                    let rentabilidadAnual = rentaYa[prop].rentabilidadAnual;
+                    let sena = rentaYa[prop].sena;
+                    let title = rentaYa[prop].title;
+                    let videoUrl = rentaYa[prop].videoUrl;
+
+                    if (isEnable) {
+
+                        addPropiededadToCarousel(amenities,
+                            barrio,
+                            calificacion,
+                            calle,
+                            conexiones,
+                            createDate,
+                            descripcion,
+                            fechaEntrega,
+                            financiacion,
+                            garages,
+                            gastosComunes,
+                            id,
+                            imageOneUrl,
+                            imageTwoUrl,
+                            imageThreeUrl,
+                            indiceInteresInquilino,
+                            indiceMoebius,
+                            isEnable,
+                            isFeatured,
+                            isViviendaPromovida,
+                            latitude,
+                            longitude,
+                            precio,
+                            rentabilidadAnual,
+                            sena,
+                            title,
+                            videoUrl);
+                    }
+                }
+            });
         }
 
         async function showOcupaYa() {
