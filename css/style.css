@@ -1607,7 +1607,8 @@ div .imagenPrensa{
 	width: 350px;
 	height: 350px;
 	perspective: 50rem;
-    margin: 20px;
+    margin: 45px;
+    border: none;
   }
   .front, .back {
 	position: absolute;
@@ -1652,7 +1653,7 @@ div .imagenPrensa{
 
   .front { 
 	background-color: white; 
-    width: 100%;
+    width: 100%;    
     box-shadow: grey 0px 1px 2px 0px;
   }
 
