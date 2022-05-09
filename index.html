@@ -9,6 +9,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ4F08ERZX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RZ4F08ERZX');
+</script>
+
     <!-- Title -->
     <title>Moebius</title>
 
@@ -147,7 +157,7 @@
                 </div>
 
                 <div id="home-btn">
-                    <img style="width: 450px;" src="img/preloader/gif-animado-moebius.gif" alt="">
+                    <img src="img/client/Banner.jpg" alt="">
                 </div>
 
             </div>
@@ -232,9 +242,9 @@
                                      </p>
                                 </div>
                                 <div style="display:flex; justify-content: center; text-align: center;margin-top: -30px;" class="nosotrosLink">
-                                   <a style="margin: 0px 5px;" href="https://twitter.com/uymoebius">Twitter</a> | <a href="https://www.facebook.com/www.Moebius.uy" style="margin: 0px 5px;">Facebook</a> | <a href="https://www.instagram.com/moebius.uy/?hl=es-la" style="margin: 0px 5px;">Instagram</a> | <a style="margin: 0px 5px;" href="https://www.linkedin.com/company/74474923/admin/">Linkedin</a>  
+                                   <a style="margin: 0px 5px;" href="https://twitter.com/GonMarVar">Twitter</a> | <a href="https://es-la.facebook.com/gonzalo.martinezvargas" style="margin: 0px 5px;">Facebook</a> | <a href="https://www.instagram.com/gonzalo.martinez.vargas" style="margin: 0px 5px;">Instagram</a> | <a style="margin: 0px 5px;" href="https://uy.linkedin.com/in/gonzalo-martinez-vargas-24b75511">Linkedin</a>  
                                 </div>
-                                    
+                                
                                 </div>
 
                                 <br><br>
@@ -273,10 +283,10 @@
                                     <br><br>
                                     <b> - PRENSA: </b> Publicamos nuestros artículos y somos consultados por la prensa
                                     especializada en temas de Real Estate de Uruguay y Argentina.
-                                    <br>
-                                    “Como especialistas en Real Estate, entendemos el mercado, analizamos las nuevas
+                                    <br><br>
+                                    <b><i> “Como especialistas en Real Estate, entendemos el mercado, analizamos las nuevas
                                     tendencias y seleccionamos las mejores opciones, minimizando el riesgo, para que el
-                                    inversor obtenga su mayor rendimiento”.
+                                    inversor obtenga su mayor rendimiento”.</i></b>
                                     <br><br><br>
                                 </p>
                             </div>
@@ -341,11 +351,11 @@
                                 </div>
 
                                 <div style="display: flex; justify-content: center;">
-                                <a href=""><img style="width: 130px; margin-left: 10px; margin-top: 10px;"   src="img/client/descarga.png" alt=""></a> 
-                                <a href=""><img style="width: 130px; margin-left: 10px; margin-top: 10px;"  src="img/client/googleplay.png" alt=""></a> 
+                                <a href="https://apps.apple.com/uy/app/moebius-uy/id1594382856?l=es"><img style="width: 130px; margin-left: 10px; margin-top: 10px;"   src="img/client/descarga.png" alt=""></a> 
+                                <a href="https://play.google.com/store/apps/details?id=com.rmartinezalbano.moebius"><img style="width: 130px; margin-left: 10px; margin-top: 10px;"  src="img/client/googleplay.png" alt=""></a> 
                                 </div>
                             
-                        
+                                
                             </div>
 
                         </div>
@@ -576,19 +586,25 @@
                             </div>
                             <!-- Client 02 -->
                             <div class="client">
-                                <img src="img/client/client-2.png" class="img-responsive" alt="client">
+                                <img src="img/client/cliente-2.jpeg" class="img-responsive" alt="client">
                             </div>
                             <!-- Client 03 -->
                             <div class="client">
-                                <img src="img/client/client-3.png" class="img-responsive" alt="client">
+                                <img src="img/client/cliente-3.jpeg" class="img-responsive" alt="client">
                             </div>
                             <!-- Client 04 -->
                             <div class="client">
-                                <img src="img/client/client-4.png" class="img-responsive" alt="client">
+                                <img src="img/client/cliente-4.jpeg" class="img-responsive" alt="client">
                             </div>
                             <!-- Client 05 -->
                             <div class="client">
                                 <img src="img/client/sura.jpeg" class="img-responsive" alt="client">
+                            </div>
+                            <div class="client">
+                                <img src="img/client/cliente-1.jpeg" class="img-responsive" alt="client">
+                            </div>
+                            <div class="client">
+                                <img src="img/client/cliente-5.jpeg" class="img-responsive" alt="client">
                             </div>
                         </div>
 
@@ -683,7 +699,7 @@
                         <!-- Contact Right -->
                         <div id="contact-right">
 
-                            <form action="https://formsubmit.co/santib1997@gmail.com" method="POST">
+                            <form action="https://formsubmit.co/gonzalo@moebius.uy" method="POST">
                                 <h4>Hablemos</h4>
                                 <p>Ponte en contacto y te contestaremos a la brevedad.</p>
 
@@ -823,6 +839,16 @@
                 }
             }
         }
+
+        async function savePrensaId(id) {
+
+for (prop in arrayPrensa) {
+
+    if (id == arrayPrensa[prop].id){
+         localStorage.setItem('prensa', JSON.stringify(arrayPrensa[prop]));
+    }
+}
+}
     </script>
 
     <script>
@@ -853,6 +879,7 @@
 
         var cantidadCarouselItems = 0;
         const arrayPropiedades = [];
+        
 
         async function fetchDataFromFirebase() {
             console.log('inicio');
@@ -900,6 +927,8 @@
             });
         }
 
+
+        
         async function fetchPrensa() {
 
             const dbRef = firebase.database().ref();
@@ -920,6 +949,8 @@
                     if (i < 2) {
                         addHTMLPrensa(id, createDate, imageUrl, isEnable, title, body);
                     }
+
+                
 
                 }
             });
@@ -1176,38 +1207,19 @@
 
         function addHTMLPrensa(id, createDate, imageUrl, isEnable, title, body) {
 
+       
+
+
             var div = document.getElementById('pressRowId');
 
             div.innerHTML += `
                     <div class="col-md-6 col-sm-6">
-                        <div class="informes" data-toggle="modal" data-target="#exampleModal${id}">
+                        <div class="informes">
                             <img src="${imageUrl}" alt="">
                             <h4>${title}</h4>
-                            <a href="prensa.html">Leer más</a>
+                            <a href="prensa-articulo.html">Leer más</a>
                         </div>
                      </div>     
-
-
-                    <div class="modal fade" id="exampleModal${id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        ${title}</h5>
-
-                </div>
-                <div class="modal-body">
-                    <div class="text-center">
-                        <img class="mx-auto imagenPrensa" src="${imageUrl}" alt="">
-                    </div>
-                    <br><br>
-                    <p>
-                        ${body}</p>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
                          `;
 
         }

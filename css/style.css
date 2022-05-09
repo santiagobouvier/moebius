@@ -1520,6 +1520,29 @@ ul.navbar-nav>li>a:focus {
                 Animation
 ============================================ */
 
+#arregloMargenTexto{
+    margin-top: -50px;
+}
+
+#home-btn img{
+    width: 650px;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 650px) {
+    
+    #home-btn img{
+        width: 200px;
+    }
+
+    #arregloMargenTexto{
+        margin-top: 20px;
+    }
+  
+}
+
+
 #home-heading-1,
 #home-heading-2,
 #home-text,
@@ -3131,3 +3154,28 @@ div .slider{
 	color: #333;
 	text-shadow: none;
 }
+
+.prensa-articulo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.prensa-articulo-text p{
+    margin-bottom: -10px;
+}
+
+.prensa-articulo-title h2{
+    margin-bottom: 20px;
+}
+
+
+.prensa-articulo-img img{
+        margin-bottom: 30px;
+        width: 900px;
+        height: 400px;
+        object-fit: cover;
+    }

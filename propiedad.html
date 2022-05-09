@@ -250,19 +250,19 @@
           <div class="col-md-7">
               <h2 style="color: #ffa502;">Propiedad</h2>
             <p><strong>BARRIO:  </strong>${prop.barrio}</p>
-            <p style ="margin-top: -50px"><strong>CALLE: </strong>${prop.calle}</p>
-            <p style ="margin-top: -50px"><strong>FECHA ENTREGA: </strong>${prop.fechaEntrega}</p>
-            <p style ="margin-top: -50px"><strong>GARAGES: </strong>${prop.garages}</p>
-            <p style ="margin-top: -50px"><strong>PRECIO: </strong>${prop.precio}</p>
-            <p style ="margin-top: -50px"><strong>FINANCIACIÓN:</strong> ${prop.financiacion}</p>
-            <p style ="margin-top: -50px"><strong>CONEXIONES: </strong>${prop.conexiones}</p>
-            <p style ="margin-top: -50px"><strong>GASTOS COMUNES: </strong>${prop.gastosComunes}</p>
+            <p id="arregloMargenTexto" ><strong>CALLE: </strong>${prop.calle}</p>
+            <p id="arregloMargenTexto" ><strong>FECHA ENTREGA: </strong>${prop.fechaEntrega}</p>
+            <p id="arregloMargenTexto" ><strong>GARAGES: </strong>${prop.garages}</p>
+            <p id="arregloMargenTexto" ><strong>PRECIO: </strong>${prop.precio}</p>
+            <p id="arregloMargenTexto" ><strong>FINANCIACIÓN:</strong> ${prop.financiacion}</p>
+            <p id="arregloMargenTexto" ><strong>CONEXIONES: </strong>${prop.conexiones}</p>
+            <p id="arregloMargenTexto" ><strong>GASTOS COMUNES: </strong>${prop.gastosComunes}</p>
             
             <h2 style="color: #ffa502;">Descripción</h2>
             <p>${prop.descripcion}</p>
             <h2 style="color: #ffa502;">Amenities</h2>
             <p>${prop.amenities}</p>
-            <p><a style="background-color: #ffa502; text-decoration: none; border: white;" href="#" class="btn btn-primary text-white">Contactate</a></p>
+            <p><a style="background-color: #ffa502; text-decoration: none; border: white;" href="https://wa.me/+59899311511?text=Hola, quería obteber más información acerca de ${prop.title}" class="btn btn-primary text-white">Contactate</a></p>
           </div>
 
 
@@ -270,11 +270,11 @@
             <div > 
                 <h2 style="color: #ffa502; margin-bottom: 20px;">Indices</h2>
                   <ul style="background-color:#ffa502; box-shadow: 0px 2px 10px 0px; border-radius: 10px;list-style: none; width: 300px;">
-                      <li style="padding: 20px; font-size: 18px; color: white;">Calificación : ${prop.calificacion}</li>
-                      <li style="padding: 20px; font-size: 18px; color: white;">Indice interés inquilino : ${prop.indiceInteresInquilino}</li>
-                      <li style="padding: 20px; font-size: 18px; color: white;">Indice Moebius : ${prop.indiceMoebius}</li>
-                      <li style="padding: 20px; font-size: 18px; color: white;">Vivienda Promovida : ${isViviendaPromovida}</li>
-                      <li style="padding: 20px; font-size: 18px; color: white;">Rentabilidad Anual : ${prop.rentabilidadAnual}</li>
+                      <li style="padding: 20px; font-size: 18px; color: white;">Calificación : ${prop.calificacion.toUpperCase()}</li>
+                      <li style="padding: 20px; font-size: 18px; color: white;">Indice interés inquilino : ${prop.indiceInteresInquilino.toUpperCase()}</li>
+                      <li style="padding: 20px; font-size: 18px; color: white;">Indice Moebius : ${prop.indiceMoebius.toUpperCase()}</li>
+                      <li style="padding: 20px; font-size: 18px; color: white;">Vivienda Promovida : ${isViviendaPromovida.toUpperCase()}</li>
+                      <li style="padding: 20px; font-size: 18px; color: white;">Rentabilidad Anual : ${prop.rentabilidadAnual.toUpperCase()}</li>
                   </ul>
               </div>
               
