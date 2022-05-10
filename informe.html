@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <!-- important meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Title -->
+  <title>Moebius</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Basic SEO -->
+  <meta name="description" content="Moebius Blog">
+  <meta name="keywords"
+    content="HTML5, CSS3, JQuery, Bootstrap, Web Design, Web Development, Responsive website, Creative website">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="img/logo/logo.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl-carousel/owl.theme.default.min.css">
+
+  <!-- Responsive Tabs CSS -->
+  <link rel="stylesheet" href="css/responsive-tabs/responsive-tabs.min.css">
+
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="css/magnific-popup/magnific-popup.min.css">
+
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="css/animate/animate.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Responsive CSS -->
+  <link rel="stylesheet" href="css/responsive.css">
+
+
+</head>
+
+<body>
+
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js">  </script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js">  </script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js">  </script>
+
+  <script>
+    const firebaseConfig = {
+
+      apiKey: "AIzaSyCqfFKcaEe2J9Dopa80VLmG62Py5KhddP0",
+      authDomain: "moebius-8ba02.firebaseapp.com",
+      databaseURL: "https://moebius-8ba02-default-rtdb.firebaseio.com",
+      projectId: "moebius-8ba02",
+      storageBucket: "moebius-8ba02.appspot.com",
+      messagingSenderId: "404676511853",
+      appId: "1:404676511853:web:4895c6ec5b3786637fd764"
+    };
+
+    const app = firebase.initializeApp(firebaseConfig);
+
+  </script>
+
+  <!-- Header -->
+  <header>
+    <nav style="margin-bottom: -60px;" class="navbar navbar-fixed-top container">
+      <div class="container">
+        <div class="site-nav-wrapper">
+
+          <div class="navbar-header">
+
+
+            <!-- Logo -->
+
+            <a class="navbar-brand" href="index.html">
+              <h1 class="volverAInicio">Volver a Inicio</h1>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header Ends -->
+
+  <script>
+
+    window.onload = getInformeUrl();
+
+    function getInformeUrl() {
+
+      var url = window.location.href;
+      
+      var idIndex = 0;
+
+      for (let index = 0; index < url.length; index++) {
+        const element = url[index];
+
+        if (element == '=') {
+          idIndex = index;
+          break;
+        }
+      
+      }
+
+    
+
+      var id = url.substring(idIndex + 1);
+     
+      fetchInforme(id);
+    }
+
+    async function fetchInforme(id) {
+
+      const dbRef = firebase.database().ref();
+
+      await dbRef.child('informes').get().then((items) => {
+
+        const informe = items.val();
+
+        addInforme(informe[id]);
+
+      });
+    }
+
+    function addInforme(informe) {
+
+      var div = document.getElementById('detallePrensa');
+
+      div.innerHTML += `
+
+      <embed src="${informe.url}" width="400" height="1000" 
+ type="application/pdf">
+    `;
+
+    }
+
+  </script>
+
+
+  <!-- Prensa -->
+  <section id="prensa">
+
+    <div class="content-box-md" style="width: 100%;">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-12 col-sm-8 press">
+
+            <div class="row wow fadeInUp" data-wow-duration="3s" id="detallePrensa">
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- Prensa Fin -->
+
+
+  <!-- Footer  -->
+  <footer class="text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p>
+            Copyright &copy; 2021 Todos los derechos reservados <span>Moebius Real Estate</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+  </footer>
+  <!-- Footer Ends -->
+
+  <!-- JQuery -->
+  <script src="js/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <!-- Owl Carousel JS -->
+  <script src="js/owl-carousel/owl.carousel.min.js"></script>
+
+  <!-- Waypoints -->
+  <script src="js/waypoints/jquery.waypoints.min.js"></script>
+
+  <!-- Responsive Tabs JS -->
+  <script src="js/responsive-tabs/jquery.responsiveTabs.min.js"></script>
+
+  <!-- Isotope -->
+  <script src="js/isotope/isotope.pkgd.min.js"></script>
+
+  <!-- Magnific Popup -->
+  <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Counter -->
+  <script src="js/counter/jquery.counterup.min.js"></script>
+
+  <!-- Google Map JS -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9EdV2JfPG1Vfviw9gf_HlblIUfs7Ie2E"></script>
+
+  <!-- Easing -->
+  <script src="js/easing/jquery.easing.1.3.min.js"></script>
+
+  <!-- WOW JS -->
+  <script src="js/wow/wow.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+
+  <!-- Bootstrap 5 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+ 
+
+
+</body>
+
+</html>
