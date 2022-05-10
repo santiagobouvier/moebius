@@ -311,7 +311,7 @@
                     if (isEnable) {
 
 
-                        addPropiededadToCarousel(amenities,
+                        addPropiededadToCarousel('pozos', amenities,
                             barrio,
                             calificacion,
                             calle,
@@ -387,7 +387,7 @@
 
                     if (isEnable) {
 
-                        addPropiededadToCarousel(amenities,
+                        addPropiededadToCarousel('rentaYa', amenities,
                             barrio,
                             calificacion,
                             calle,
@@ -463,7 +463,7 @@
 
                     if (isEnable) {
 
-                        addPropiededadToCarousel(amenities,
+                        addPropiededadToCarousel('ocupaYa',amenities,
                             barrio,
                             calificacion,
                             calle,
@@ -498,7 +498,7 @@
         }
 
 
-        function addPropiededadToCarousel(amenities,
+        function addPropiededadToCarousel(type,amenities,
             barrio,
             calificacion,
             calle,
@@ -573,7 +573,7 @@
             </div>
             <div class="back">
                 <div>
-                    <a onClick={savePropertyId("${id}")} href="propiedad.html">Ver Más</a>
+                    <a onClick={savePropertyId("${id}")} href="propiedad.html?type=${type}&id=${id}">Ver Más</a>
                 </div>
             </div>
         </div>

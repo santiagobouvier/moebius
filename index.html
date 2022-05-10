@@ -1219,21 +1219,22 @@
 
         function addHTMLPrensa(id, createDate, imageUrl, isEnable, title, body) {
 
-
-
-
             var div = document.getElementById('pressRowId');
 
             div.innerHTML += `
                     <div class="col-md-6 col-sm-6">
                         <div class="informes">
+                            <a href="articulo.html?id=${id}">
                             <img src="${imageUrl}" alt="">
-                            <h4>${title}</h4>
-                            <a href="prensa-articulo.html">Leer más</a>
+                           
+                            <h4 class="title-h4">${title}</h4>
+                            
+                            Leer más
+                        </a>
                         </div>
+                        
                      </div>     
                          `;
-
         }
 
         function addPropiededadToCarousel(type,index, amenities,
@@ -1296,8 +1297,6 @@
 
             arrayPropiedades.push(propiedad)
 
-
-
             var div = document.getElementById('propiedades');
 
             div.innerHTML += `
@@ -1318,8 +1317,6 @@
     `;
         }
     </script>
-
-
 
 </body>
 

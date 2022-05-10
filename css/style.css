@@ -3179,3 +3179,12 @@ div .slider{
         height: 400px;
         object-fit: cover;
     }
+
+
+    .title-h4{
+        font-size: 13px;
+    }
+
+    .title-press-h4{
+        font-size: 18px;
+    }
